@@ -109,7 +109,7 @@ def main():
                 return
 
             # Display predicted price range
-            st.success(f'Estimate price : {int(prediction)}')
+            st.success(f'Estimate price : {(int(prediction)//1000)*1000}')
         else:
             st.error('Please enter valid values for all input features.')
 
