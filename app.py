@@ -28,7 +28,7 @@ MODEL = ['Alto', 'Grand', 'i20', 'Ecosport', 'Wagon R', 'i10', 'Venue',
 def main():
     # st.title('Used Car Price Prediction')
     st.markdown("<h1 style='text-align: center;'>Used Car Price Prediction</h1>", unsafe_allow_html=True)
-    img = Image.open(r'images\car.jpg')
+    img = Image.open(r'images/car.jpg')
     st.image(img, width=None, use_column_width=True)
 
     # Input fields
@@ -82,8 +82,8 @@ def main():
                             engine, max_power, seats]):
             # Load model and scaler
             try:
-                model = pickle.load(open(r'models\model.sav', 'rb'))
-                scaler = pickle.load(open(r'models\scaler.sav', 'rb'))
+                model = pickle.load(open(r'models/model.sav', 'rb'))
+                scaler = pickle.load(open(r'models/scaler.sav', 'rb'))
             except Exception as e:
                 st.error(f"Error loading model: {e}")
                 return
